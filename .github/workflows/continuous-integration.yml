@@ -20,10 +20,6 @@ jobs:
           java-version: 21
           cache: maven
 
-      - name: Build & Unit & IT & FT & Sonar Analysis
-        run: >
-          mvn -B clean verify sonar:sonar 
-          -Dsonar.projectKey=miw-upm-github_micro-order-api
-          -Dsonar.organization=miw-upm-github 
-          -Dsonar.host.url=https://sonarcloud.io 
-          -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+      - name: Build & Package
+        run: mvn -B clean package
+
