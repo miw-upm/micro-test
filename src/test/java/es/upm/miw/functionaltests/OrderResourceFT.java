@@ -13,7 +13,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest
 @ActiveProfiles("test")
-class OrderResourceFunctionalTest {
+class OrderResourceFT {
 
     private RestTemplate restTemplate;
 
